@@ -1,14 +1,26 @@
-﻿using Microsoft.Owin;
-using Owin;
+﻿#region
 
-[assembly: OwinStartupAttribute(typeof(Twitter.App.Startup))]
+using Microsoft.Owin;
+
+using Twitter.App;
+
+#endregion
+
+[assembly: OwinStartup(typeof(Startup))]
+
 namespace Twitter.App
 {
+    #region
+
+    using Owin;
+
+    #endregion
+
     public partial class Startup
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
+            this.ConfigureAuth(app);
         }
     }
 }

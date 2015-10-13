@@ -8,6 +8,7 @@ namespace Twitter.Tests
 {
     #region
 
+    using Microsoft.VisualStudio.TestTools.UITesting;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     #endregion
