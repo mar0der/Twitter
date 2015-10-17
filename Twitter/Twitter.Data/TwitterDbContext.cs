@@ -17,7 +17,6 @@ namespace Twitter.Data
         public TwitterDbContext()
             : base("TwitterDbContext")
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TwitterDbContext, Configuration>());
         }
 
         public static TwitterDbContext Create()

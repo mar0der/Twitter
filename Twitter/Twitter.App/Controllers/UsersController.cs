@@ -4,11 +4,17 @@
 
     using System.Web.Mvc;
 
+    using Twitter.Data.Interfaces;
+
     #endregion
 
-    public class UserController : Controller
+    public class UsersController : BaseController
     {
-        // GET: User
+        public UsersController(ITwitterData data)
+            : base(data)
+        {
+        }
+
         public ActionResult Index()
         {
             return this.View();
